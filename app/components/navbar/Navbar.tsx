@@ -8,6 +8,8 @@ import MenuItem from './MenuItem';
 import {useState} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa';
 
+import {NavLink} from 'reactstrap';
+
 const Navbar = () => {
   const router = useRouter();
   const [open, setOpen] = useState(false);
@@ -56,6 +58,14 @@ const Navbar = () => {
                 onClick={() => router.push('/contact')}
                 label="Contact"
               />
+              <NavLink
+                id="resume"
+                href="/resume.pdf"
+                target="_blank"
+                className="text-aqua"
+              >
+                <MenuItem label="Resume" />
+              </NavLink>
             </div>
             <button
               onClick={handleMenu}
