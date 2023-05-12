@@ -95,8 +95,12 @@ const Projects = () => {
             </div>
             <div className="mt-8">
               <h3 className="text-2xl text-aqua font-medium">
-                <a href={project.website} className="focus:outline-none">
-                  <span className="" aria-hidden="true" />
+                <a
+                  href={project.website}
+                  target="_blank"
+                  className="focus:outline-none"
+                >
+                  <span aria-hidden="true" />
                   {project.name}
                 </a>
               </h3>
