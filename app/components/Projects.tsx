@@ -37,7 +37,7 @@ const Projects = () => {
       description:
         'My personal software engineering portfolio, showcasing my skills and projects as a software engineer.',
       frameworks: 'Next.js, TypeScript, TailwindCSS',
-      website: '',
+      website: 'https://markgowen.dev/',
       github: 'https://github.com/markgowen/portfolio-v2',
     },
   ];
