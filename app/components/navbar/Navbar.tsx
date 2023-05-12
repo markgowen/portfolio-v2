@@ -58,12 +58,7 @@ const Navbar = () => {
                 onClick={() => router.push('/contact')}
                 label="Contact"
               />
-              <NavLink
-                id="resume"
-                href="/resume.pdf"
-                target="_blank"
-                className="text-aqua"
-              >
+              <NavLink id="resume" href="/resume.pdf" target="_blank">
                 <MenuItem label="Resume" />
               </NavLink>
             </div>
@@ -97,12 +92,7 @@ const Navbar = () => {
               label="Projects"
             />
             <MenuItem onClick={() => router.push('/contact')} label="Contact" />
-            <NavLink
-              id="resume"
-              href="/resume.pdf"
-              target="_blank"
-              className="text-aqua"
-            >
+            <NavLink id="resume" href="/resume.pdf" target="_blank">
               <MenuItem label="Resume" />
             </NavLink>
           </div>
