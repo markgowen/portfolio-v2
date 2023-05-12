@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import {useRouter} from 'next/navigation';
 
 import Container from '../Container';
@@ -7,8 +8,6 @@ import Logo from './Logo';
 import MenuItem from './MenuItem';
 import {useState} from 'react';
 import {FaBars, FaTimes} from 'react-icons/fa';
-
-import {NavLink} from 'reactstrap';
 
 const Navbar = () => {
   const router = useRouter();
@@ -58,9 +57,9 @@ const Navbar = () => {
                 onClick={() => router.push('/contact')}
                 label="Contact"
               />
-              <NavLink id="resume" href="/resume.pdf" target="_blank">
+              <Link id="resume" href="/resume.pdf" target="_blank">
                 <MenuItem label="Resume" />
-              </NavLink>
+              </Link>
             </div>
             <button
               onClick={handleMenu}
@@ -92,9 +91,9 @@ const Navbar = () => {
               label="Projects"
             />
             <MenuItem onClick={() => router.push('/contact')} label="Contact" />
-            <NavLink id="resume" href="/resume.pdf" target="_blank">
+            <Link id="resume" href="/resume.pdf" target="_blank">
               <MenuItem label="Resume" />
-            </NavLink>
+            </Link>
           </div>
         ) : null}
       </div>
