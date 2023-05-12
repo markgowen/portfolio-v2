@@ -7,7 +7,7 @@ const Logo = () => {
 
   return (
     <div
-      onClick={() => router.push('/#S')}
+      onClick={() => router.push('/')}
       className="text-aqua px-4 py-3 cursor-pointer"
     >
       Mark Gowen
