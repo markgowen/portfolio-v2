@@ -97,6 +97,14 @@ const Navbar = () => {
               label="Projects"
             />
             <MenuItem onClick={() => router.push('/contact')} label="Contact" />
+            <NavLink
+              id="resume"
+              href="/resume.pdf"
+              target="_blank"
+              className="text-aqua"
+            >
+              <MenuItem label="Resume" />
+            </NavLink>
           </div>
         ) : null}
       </div>
