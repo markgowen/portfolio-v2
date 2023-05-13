@@ -15,7 +15,6 @@ const Navbar = () => {
 
   const handleMenu = () => {
     setOpen((prev) => !prev);
-    console.log(open);
   };
 
   return (
