@@ -1,13 +1,13 @@
 'use client';
 
 import Link from 'next/link';
-import {useRouter} from 'next/navigation';
+import { useRouter } from 'next/navigation';
 
 import Container from '../Container';
 import Logo from './Logo';
 import MenuItem from './MenuItem';
-import {useState} from 'react';
-import {FaBars, FaTimes} from 'react-icons/fa';
+import { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
   const router = useRouter();
@@ -19,50 +19,60 @@ const Navbar = () => {
 
   return (
     <div
-      className="
+      className='
             fixed
             z-10
             w-full
-        "
+        '
     >
       <div
-        className="
+        className='
             border-b-[1px]
             py-4
             border-midnight-200
             bg-midnight-100
-        "
+        '
       >
         <Container>
           <div
-            className="
+            className='
                     flex
                     flex-row
                     justify-between
                     items-center
                     gap-1
                     md:gap-0
-                "
+                '
           >
             <Logo />
-            <div className="hidden sm:flex">
-              <MenuItem onClick={() => router.push('/#about')} label="About" />
-              <MenuItem onClick={() => router.push('/#work')} label="Work" />
+            <div className='hidden sm:flex'>
+              <MenuItem
+                onClick={() => router.push('/#about')}
+                label='About'
+              />
+              <MenuItem
+                onClick={() => router.push('/#work')}
+                label='Work'
+              />
               <MenuItem
                 onClick={() => router.push('/#projects')}
-                label="Projects"
+                label='Projects'
               />
               <MenuItem
-                onClick={() => router.push('/contact')}
-                label="Contact"
+                onClick={() => router.push('/#contact')}
+                label='Contact'
               />
-              <Link id="resume" href="/resume.pdf" target="_blank">
-                <MenuItem label="Resume" />
+              <Link
+                id='resume'
+                href='/resume.pdf'
+                target='_blank'
+              >
+                <MenuItem label='Resume' />
               </Link>
             </div>
             <button
               onClick={handleMenu}
-              className="px-4 py-3 flex sm:hidden text-aqua"
+              className='px-4 py-3 flex sm:hidden text-aqua'
             >
               {open === true ? <FaTimes /> : <FaBars />}
             </button>
@@ -70,7 +80,7 @@ const Navbar = () => {
         </Container>
         {open ? (
           <div
-            className="
+            className='
             absolute
             right-0
             top-14
@@ -81,17 +91,30 @@ const Navbar = () => {
             text-sm
             shadow-md
             md:w-3/4
-        "
+        '
           >
-            <MenuItem onClick={() => router.push('/#about')} label="About" />
-            <MenuItem onClick={() => router.push('/#work')} label="Work" />
+            <MenuItem
+              onClick={() => router.push('/#about')}
+              label='About'
+            />
+            <MenuItem
+              onClick={() => router.push('/#work')}
+              label='Work'
+            />
             <MenuItem
               onClick={() => router.push('/#projects')}
-              label="Projects"
+              label='Projects'
             />
-            <MenuItem onClick={() => router.push('/contact')} label="Contact" />
-            <Link id="resume" href="/resume.pdf" target="_blank">
-              <MenuItem label="Resume" />
+            <MenuItem
+              onClick={() => router.push('/#contact')}
+              label='Contact'
+            />
+            <Link
+              id='resume'
+              href='/resume.pdf'
+              target='_blank'
+            >
+              <MenuItem label='Resume' />
             </Link>
           </div>
         ) : null}
