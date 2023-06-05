@@ -6,11 +6,11 @@ interface MenuItemProps {
   label: string;
 }
 
-const MenuItem: React.FC<MenuItemProps> = ({onClick, label}) => {
+const MenuItem: React.FC<MenuItemProps> = ({ onClick, label }) => {
   return (
     <div
       onClick={onClick}
-      className="
+      className='
             place-content-end
             px-4
             py-3
@@ -18,9 +18,9 @@ const MenuItem: React.FC<MenuItemProps> = ({onClick, label}) => {
             text-aqua
             hover:text-silver
             cursor-pointer
-            "
+            '
     >
-      <em className="text-salmon mr-2">//</em>
+      <em className='text-salmon mr-2'>//</em>
       {label}
     </div>
   );

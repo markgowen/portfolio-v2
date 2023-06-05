@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { Link as ScrollLink } from 'react-scroll';
 import { useRouter } from 'next/navigation';
 
 import Container from '../Container';
@@ -46,22 +47,38 @@ const Navbar = () => {
           >
             <Logo />
             <div className='hidden sm:flex'>
-              <MenuItem
-                onClick={() => router.push('/#about')}
-                label='About'
-              />
-              <MenuItem
-                onClick={() => router.push('/#work')}
-                label='Work'
-              />
-              <MenuItem
-                onClick={() => router.push('/#projects')}
-                label='Projects'
-              />
-              <MenuItem
-                onClick={() => router.push('/#contact')}
-                label='Contact'
-              />
+              <ScrollLink
+                to='about'
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <MenuItem label='About' />
+              </ScrollLink>
+              <ScrollLink
+                to='work'
+                smooth={true}
+                offset={-120}
+                duration={500}
+              >
+                <MenuItem label='Work' />
+              </ScrollLink>
+              <ScrollLink
+                to='projects'
+                smooth={true}
+                offset={-120}
+                duration={500}
+              >
+                <MenuItem label='Projects' />
+              </ScrollLink>
+              <ScrollLink
+                to='contact'
+                smooth={true}
+                offset={-120}
+                duration={500}
+              >
+                <MenuItem label='Contact' />
+              </ScrollLink>
               <Link
                 id='resume'
                 href='/resume.pdf'
@@ -93,22 +110,10 @@ const Navbar = () => {
             md:w-3/4
         '
           >
-            <MenuItem
-              onClick={() => router.push('/#about')}
-              label='About'
-            />
-            <MenuItem
-              onClick={() => router.push('/#work')}
-              label='Work'
-            />
-            <MenuItem
-              onClick={() => router.push('/#projects')}
-              label='Projects'
-            />
-            <MenuItem
-              onClick={() => router.push('/#contact')}
-              label='Contact'
-            />
+            <MenuItem label='About' />
+            <MenuItem label='Work' />
+            <MenuItem label='Projects' />
+            <MenuItem label='Contact' />
             <Link
               id='resume'
               href='/resume.pdf'

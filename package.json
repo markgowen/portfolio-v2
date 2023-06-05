@@ -30,8 +30,12 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
     "react-pdf": "^6.2.2",
+    "react-scroll": "^1.8.9",
     "reactstrap": "^9.1.9",
     "tailwindcss": "3.3.2",
     "typescript": "5.0.4"
+  },
+  "devDependencies": {
+    "@types/react-scroll": "^1.8.7"
   }
 }

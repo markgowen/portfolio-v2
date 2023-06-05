@@ -1,14 +1,12 @@
 'use client';
 
-import {useRouter} from 'next/navigation';
+import { animateScroll } from 'react-scroll';
 
 const Logo = () => {
-  const router = useRouter();
-
   return (
     <div
-      onClick={() => router.push('/')}
-      className="text-aqua px-4 py-3 cursor-pointer"
+      onClick={() => animateScroll.scrollToTop()}
+      className='text-aqua px-4 py-3 cursor-pointer'
     >
       Mark Gowen
     </div>
