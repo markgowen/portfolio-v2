@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 'use client';
 
-import {useState} from 'react';
+import { useState } from 'react';
 import Company from './Company';
 
 /* eslint-disable react/no-unescaped-entities */
@@ -14,6 +14,14 @@ const Work = () => {
   let employers = [
     {
       id: 1,
+      name: 'Slingshot, Inc.',
+      role: 'Web Developer',
+      time_employed: 'May 2023 - Present',
+      description_1:
+        'Collaborate with cross-functional teams to launch websites on WordPress, with a goal to increase sales by 25% and improve conversion rates. Including SEO best practices.',
+    },
+    {
+      id: 2,
       name: 'Mark Gowen, LLC',
       role: 'Photographer',
       time_employed: 'February 2018 - Present',
@@ -23,7 +31,7 @@ const Work = () => {
         'Collaborated with 3-5 vendors and event planners per wedding to ensure seamless coordination of events, resulting in a stress-free and enjoyable experience for clients.',
     },
     {
-      id: 2,
+      id: 3,
       name: '1 Source Solar',
       role: 'Director of Sales',
       time_employed: 'November 2017 - February 2018',
@@ -33,7 +41,7 @@ const Work = () => {
         'Collaborated with cross-functional teams, including engineering and installation teams, to ensure seamless delivery of solar solutions to achieve 95% customer satisfaction.',
     },
     {
-      id: 3,
+      id: 4,
       name: 'Iowa Wind and Solar',
       role: 'Renewable Energy Consultant',
       time_employed: 'December 2015 - November 2017',
@@ -51,8 +59,8 @@ const Work = () => {
   return (
     <>
       <div
-        id="work"
-        className="
+        id='work'
+        className='
             relative
             mx-auto
             my-6
@@ -62,28 +70,31 @@ const Work = () => {
             md:h-auto
             lg:h-auto
             max-w-3xl
-      "
+      '
       >
-        <div className="text-4xl sm:text-3xl font-bold leading-8 tracking-tight text-silver">
-          <em className="text-salmon mr-2">//</em> Places I've Worked
+        <div className='text-4xl sm:text-3xl font-bold leading-8 tracking-tight text-silver'>
+          <em className='text-salmon mr-2'>//</em> Places I've Worked
         </div>
         <div
-          className="
+          className='
                 grid
                 grid-cols-4
-            "
+            '
         >
-          <div className="max-w-max col-span-1 overflow-y-auto pt-5 pb-4">
+          <div className='max-w-max col-span-1 overflow-y-auto pt-5 pb-4'>
             <div
-              className="
+              className='
                     mt-5
                     flex
                     flex-col
                     flex-grow
                     items-center
-                "
+                '
             >
-              <nav className="flex-1 cursor-pointer" aria-label="Sidebar">
+              <nav
+                className='flex-1 cursor-pointer'
+                aria-label='Sidebar'
+              >
                 {employers.map((employer) => (
                   <div
                     onClick={() => setEmployerId(employer.id)}
@@ -101,7 +112,7 @@ const Work = () => {
               </nav>
             </div>
           </div>
-          <div className="grid-span-1 mt-10">
+          <div className='grid-span-1 mt-10'>
             {employer ? (
               <Company employer={employer} />
             ) : (
