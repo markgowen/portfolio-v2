@@ -60,61 +60,38 @@ const Work = () => {
     <>
       <div
         id='work'
-        className='
-            relative
-            mx-auto
-            my-6
-            md:mt-48
-            py-16
-            px-6
-            h-full
-            w-full
-            md:h-auto
-            lg:h-auto
-            max-w-3xl
-      '
+        className='relative mx-auto my-6 md:mt-48 py-16 px-6 max-w-3xl'
       >
         <div className='text-4xl sm:text-3xl font-bold leading-8 tracking-tight text-silver'>
           <em className='text-salmon mr-2'>//</em> Places I've Worked
         </div>
-        <div
-          className='
-                grid
-                grid-cols-4
-            '
-        >
-          <div className='max-w-max col-span-1 overflow-y-auto pt-5 pb-4'>
-            <div
-              className='
-                    mt-5
-                    flex
-                    flex-col
-                    flex-grow
-                    items-center
-                '
-            >
-              <nav
-                className='flex-1 cursor-pointer'
-                aria-label='Sidebar'
-              >
-                {employers.map((employer) => (
-                  <div
-                    onClick={() => setEmployerId(employer.id)}
-                    key={employer.name}
-                    className={classNames(
-                      employer.id === employerId
-                        ? ' border-salmon bg-salmon/10 text-salmon hover:border-l-salmon hover:bg-salmon/10 hover:text-salmon'
-                        : 'border-silver/10 text-silver hover:bg-salmon/10 hover:text-salmon',
-                      'group flex px-5 py-2 text-base font-medium border-l-4'
-                    )}
-                  >
-                    {employer.name}
-                  </div>
-                ))}
+        <div className='flex flex-col md:flex-row '>
+          {/* Sidebar navigation */}
+          <div className='max-w-max overflow-y-auto pt-5 pb-4 md:sticky md:top-0 md:h-full '>
+            <div className='mt-5 flex flex-col flex-grow items-center'>
+              <nav className='flex-1 cursor-pointer'>
+                <div className='flex md:flex-wrap'>
+                  {employers.map((employer) => (
+                    <div
+                      onClick={() => setEmployerId(employer.id)}
+                      key={employer.name}
+                      className={classNames(
+                        employer.id === employerId
+                          ? 'border-salmon bg-salmon/10 text-salmon hover:border-l-salmon hover:bg-salmon/10 hover:text-salmon'
+                          : 'border-silver/10 text-silver hover:bg-salmon/10 hover:text-salmon',
+                        'group flex px-5 py-2 text-base font-medium border-l-4 mr-2'
+                      )}
+                    >
+                      {employer.name}
+                    </div>
+                  ))}
+                </div>
               </nav>
             </div>
           </div>
-          <div className='grid-span-1 mt-10'>
+
+          {/* Individual employer component */}
+          <div className='flex-grow mt-10'>
             {employer ? (
               <Company employer={employer} />
             ) : (
