@@ -51,7 +51,7 @@ const Company: React.FC<CompanyProps> = ({ employer }) => {
                 viewBox='0 0 24 24'
                 strokeWidth={1.5}
                 stroke='currentColor'
-                className='text-aqua w-12 h-12 sm:w-4 sm:h-4'
+                className='text-aqua w-6 h-6 sm:w-4 sm:h-4'
               >
                 <path
                   strokeLinecap='round'
