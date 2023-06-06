@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { Link as ScrollLink } from 'react-scroll';
-import { useRouter } from 'next/navigation';
 
 import Container from '../Container';
 import Logo from './Logo';
@@ -11,7 +10,6 @@ import { useState } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
 const Navbar = () => {
-  const router = useRouter();
   const [open, setOpen] = useState(false);
 
   const handleMenu = () => {
