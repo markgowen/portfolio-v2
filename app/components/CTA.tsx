@@ -9,7 +9,7 @@ const CTA = () => {
   return (
     <div
       id='contact'
-      className='mx-auto text-center mb-40 max-w-2xl'
+      className='mx-auto text-center py-16 px-6 md:mt-48 max-w-2xl'
     >
       <div className='text-salmon text-4xl mb-6 font-bold'>Reach Out</div>
       <div className='text-silver text-xl'>

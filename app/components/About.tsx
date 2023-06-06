@@ -11,7 +11,7 @@ const About = () => {
         relative
         mx-auto
         my-6
-        mt-48
+        md:mt-48
         h-full
         w-full
         md:h-auto

@@ -13,7 +13,9 @@ const Hero = () => {
         className='
                 relative
                 mx-auto
-                my-6
+                my-12
+                py-16
+                px-6
                 pt-16
                 h-full
                 w-full

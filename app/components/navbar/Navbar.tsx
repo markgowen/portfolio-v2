@@ -108,10 +108,38 @@ const Navbar = () => {
             md:w-3/4
         '
           >
-            <MenuItem label='About' />
-            <MenuItem label='Work' />
-            <MenuItem label='Projects' />
-            <MenuItem label='Contact' />
+            <ScrollLink
+              to='about'
+              smooth={true}
+              offset={-70}
+              duration={500}
+            >
+              <MenuItem label='About' />
+            </ScrollLink>
+            <ScrollLink
+              to='work'
+              smooth={true}
+              offset={-120}
+              duration={500}
+            >
+              <MenuItem label='Work' />
+            </ScrollLink>
+            <ScrollLink
+              to='projects'
+              smooth={true}
+              offset={-120}
+              duration={500}
+            >
+              <MenuItem label='Projects' />
+            </ScrollLink>
+            <ScrollLink
+              to='contact'
+              smooth={true}
+              offset={-120}
+              duration={500}
+            >
+              <MenuItem label='Contact' />
+            </ScrollLink>
             <Link
               id='resume'
               href='/resume.pdf'
