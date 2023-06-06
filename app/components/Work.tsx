@@ -70,7 +70,7 @@ const Work = () => {
           <div className='max-w-max overflow-y-auto pt-5 pb-4 md:sticky md:top-0 md:h-full '>
             <div className='mt-5 flex flex-col flex-grow items-center'>
               <nav className='flex-1 cursor-pointer'>
-                <div className='flex md:flex-wrap'>
+                <div className='md:flex md:flex-wrap overflow-x-visible whitespace-nowrap sm:whitespace-normal'>
                   {employers.map((employer) => (
                     <div
                       onClick={() => setEmployerId(employer.id)}
